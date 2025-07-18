@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gulf Travel Buddy - Meet Local Guides in the Middle East</title>
-    <!-- Free Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Free Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Hiba Khudsia Siddiqua | Luxury Calligrapher & Engraver</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lightbox for gallery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <style>
         :root {
-            --primary: #FF7F50; /* Coral */
-            --secondary: #40E0D0; /* Turquoise */
-            --accent: #FFD700; /* Gold */
-            --dark: #2F4F4F; /* Dark Slate Gray */
-            --light: #F5F5F5;
-            --success: #3CB371;
+            --gold: #D4AF37;
+            --black: #1A1A1A;
+            --white: #FFFFFF;
+            --cream: #F5F5F0;
+            --dark-gold: #B8860B;
         }
         
         * {
@@ -25,15 +26,33 @@
         }
         
         body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #F5F5F5;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--cream);
+            color: var(--black);
+            line-height: 1.8;
+            overflow-x: hidden;
         }
         
-        h1, h2, h3, h4 {
-            font-family: 'Poppins', sans-serif;
-            color: var(--dark);
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--black);
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
         }
         
         .container {
@@ -42,35 +61,20 @@
             padding: 0 20px;
         }
         
-        /* Header */
-        header {
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(5px);
-        }
-        
-        nav {
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
         }
         
         .logo {
+            font-family: 'Dancing Script', cursive;
             font-size: 28px;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
+            color: var(--gold);
         }
         
-        .logo i {
-            margin-right: 10px;
-            color: var(--accent);
+        .logo span {
+            color: var(--white);
         }
         
         .nav-links {
@@ -83,15 +87,13 @@
         }
         
         .nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: all 0.3s;
+            font-weight: 600;
+            transition: color 0.3s;
             position: relative;
         }
         
         .nav-links a:hover {
-            color: var(--primary);
+            color: var(--gold);
         }
         
         .nav-links a:after {
@@ -99,7 +101,7 @@
             position: absolute;
             width: 0;
             height: 2px;
-            background: var(--primary);
+            background: var(--gold);
             bottom: -5px;
             left: 0;
             transition: width 0.3s;
@@ -109,106 +111,93 @@
             width: 100%;
         }
         
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding-top: 80px;
+        }
+        
+        .hero-content h1 {
+            font-size: 72px;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+        
+        .hero-content p {
+            font-size: 22px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
         .btn {
             display: inline-block;
-            padding: 12px 25px;
-            border-radius: 30px;
+            padding: 15px 30px;
+            border-radius: 50px;
             font-weight: 600;
-            text-decoration: none;
             transition: all 0.3s;
-            cursor: pointer;
-            text-align: center;
+            margin: 10px;
         }
         
-        .btn-primary {
-            background-color: var(--primary);
-            color: white;
-            border: 2px solid var(--primary);
-            box-shadow: 0 4px 15px rgba(255, 127, 80, 0.3);
+        .btn-gold {
+            background: var(--gold);
+            color: var(--black);
+            border: 2px solid var(--gold);
         }
         
-        .btn-primary:hover {
-            background-color: transparent;
-            color: var(--primary);
+        .btn-gold:hover {
+            background: transparent;
+            color: var(--gold);
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 127, 80, 0.4);
         }
         
         .btn-outline {
-            background-color: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
+            background: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
         }
         
         .btn-outline:hover {
-            background-color: var(--primary);
-            color: white;
+            background: var(--gold);
+            color: var(--black);
             transform: translateY(-3px);
-            box-shadow: 0 4px 15px rgba(255, 127, 80, 0.3);
         }
         
-        .btn-accent {
-            background-color: var(--accent);
-            color: var(--dark);
-            border: 2px solid var(--accent);
-            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
-        }
-        
-        .btn-accent:hover {
-            background-color: transparent;
-            color: var(--accent);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                        url('https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            padding: 150px 0;
-            text-align: center;
-            color: white;
-        }
-        
-        .hero h1 {
-            font-size: 56px;
-            margin-bottom: 20px;
-            line-height: 1.2;
-            color: white;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
-        }
-        
-        .hero p {
-            font-size: 22px;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            color: rgba(255,255,255,0.9);
-            text-shadow: 0 1px 3px rgba(0,0,0,0.2);
-        }
-        
-        .hero-btns {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-        }
-        
-        /* How It Works */
-        .section {
+        /* About Section */
+        .about {
             padding: 100px 0;
+            background: var(--white);
             position: relative;
+        }
+        
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: url('https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3') center/cover no-repeat;
+            opacity: 0.1;
+            z-index: 0;
         }
         
         .section-title {
             text-align: center;
             margin-bottom: 60px;
+            position: relative;
+            z-index: 1;
         }
         
         .section-title h2 {
-            font-size: 42px;
-            margin-bottom: 15px;
+            font-size: 48px;
             position: relative;
             display: inline-block;
         }
@@ -216,491 +205,472 @@
         .section-title h2:after {
             content: '';
             position: absolute;
-            width: 60px;
-            height: 4px;
-            background: var(--primary);
-            bottom: -10px;
+            width: 80px;
+            height: 3px;
+            background: var(--gold);
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            border-radius: 2px;
         }
         
-        .section-title p {
-            color: #666;
-            max-width: 700px;
-            margin: 20px auto 0;
-            font-size: 18px;
-        }
-        
-        .steps {
+        .about-content {
             display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-        
-        .step {
-            flex: 1;
-            min-width: 250px;
-            background: white;
-            padding: 40px 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            text-align: center;
-            transition: all 0.4s;
+            align-items: center;
+            gap: 50px;
             position: relative;
-            overflow: hidden;
             z-index: 1;
         }
         
-        .step:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-        }
-        
-        .step:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-        }
-        
-        .step-icon {
-            font-size: 50px;
-            margin-bottom: 25px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        .step h3 {
-            margin-bottom: 15px;
-            font-size: 22px;
-        }
-        
-        .step p {
-            color: #666;
-        }
-        
-        /* Cities */
-        .cities {
-            background: linear-gradient(rgba(245, 245, 245, 0.9), rgba(245, 245, 245, 0.9)), 
-                        url('https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-attachment: fixed;
-        }
-        
-        .city-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
-        }
-        
-        .city-card {
-            background: white;
-            border-radius: 12px;
+        .about-img {
+            flex: 1;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            transition: all 0.4s;
-            position: relative;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
         
-        .city-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-        
-        .city-img {
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-        
-        .city-img:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
+        .about-img img {
             width: 100%;
-            height: 50%;
-            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
         }
         
-        .city-info {
-            padding: 25px;
-            position: relative;
+        .about-img:hover img {
+            transform: scale(1.05);
         }
         
-        .city-info h3 {
-            margin-bottom: 10px;
-            font-size: 22px;
-            color: var(--dark);
+        .about-text {
+            flex: 1;
         }
         
-        .city-info p {
-            color: #666;
+        .about-text h3 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+        
+        .about-text p {
             margin-bottom: 20px;
         }
         
-        .city-tag {
-            position: absolute;
-            top: -15px;
-            right: 20px;
-            background: var(--accent);
-            color: var(--dark);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 14px;
-            box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 36px;
+            color: var(--gold);
+            margin-top: 30px;
         }
         
-        /* Testimonials */
-        .testimonials {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: url('https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3') center/cover fixed;
             position: relative;
-            overflow: hidden;
+            color: var(--white);
         }
         
-        .testimonials:before {
+        .services::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.1;
-            z-index: 0;
+            background: rgba(0, 0, 0, 0.7);
         }
         
-        .testimonials .container {
+        .services .container {
             position: relative;
             z-index: 1;
         }
         
-        .testimonials .section-title h2,
-        .testimonials .section-title p {
-            color: white;
+        .services .section-title h2,
+        .services .section-title p {
+            color: var(--white);
         }
         
-        .testimonial-grid {
-            display: flex;
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            overflow-x: auto;
-            padding-bottom: 30px;
-            scrollbar-width: thin;
-            scrollbar-color: var(--accent) transparent;
         }
         
-        .testimonial-grid::-webkit-scrollbar {
-            height: 8px;
-        }
-        
-        .testimonial-grid::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        
-        .testimonial-grid::-webkit-scrollbar-thumb {
-            background-color: var(--accent);
-            border-radius: 20px;
-        }
-        
-        .testimonial-card {
-            min-width: 350px;
-            background: rgba(255, 255, 255, 0.15);
+        .service-card {
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
             border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 30px;
+        }
+        
+        .service-content h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+        
+        /* Portfolio Section */
+        .portfolio {
+            padding: 100px 0;
+            background: var(--white);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .portfolio-img {
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .portfolio-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .portfolio-item:hover .portfolio-img img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: var(--white);
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+        
+        /* Clients Section */
+        .clients {
+            padding: 80px 0;
+            background: var(--cream);
+        }
+        
+        .clients-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .client-logo {
+            max-width: 150px;
+            filter: grayscale(100%);
+            opacity: 0.7;
             transition: all 0.3s;
         }
         
-        .testimonial-card:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-5px);
+        .client-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
         }
         
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 25px;
-            font-size: 16px;
-            line-height: 1.8;
+        /* Instagram Section */
+        .instagram {
+            padding: 100px 0;
+            background: var(--white);
+        }
+        
+        .instagram-feed {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .instagram-post {
             position: relative;
+            overflow: hidden;
+            border-radius: 10px;
         }
         
-        .testimonial-text:before {
-            content: '"';
-            font-size: 60px;
+        .instagram-post img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .instagram-post:hover img {
+            transform: scale(1.1);
+        }
+        
+        .instagram-overlay {
             position: absolute;
-            top: -20px;
-            left: -15px;
-            color: rgba(255, 255, 255, 0.2);
-            font-family: serif;
-        }
-        
-        .testimonial-author {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
             display: flex;
             align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
         }
         
-        .author-img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #ddd;
-            margin-right: 15px;
-            background-size: cover;
-            border: 3px solid white;
+        .instagram-post:hover .instagram-overlay {
+            opacity: 1;
         }
         
-        .author-info h4 {
-            color: white;
-            margin-bottom: 5px;
+        .instagram-overlay i {
+            color: var(--white);
+            font-size: 30px;
         }
         
-        .author-info p {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 14px;
-        }
-        
-        .rating {
-            color: var(--accent);
-            margin-top: 5px;
-        }
-        
-        /* CTA */
-        .cta {
-            text-align: center;
+        /* Contact Section */
+        .contact {
             padding: 100px 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                        url('https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background: var(--cream);
+            background-image: url('https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            color: white;
-        }
-        
-        .cta h2 {
-            font-size: 42px;
-            margin-bottom: 20px;
-        }
-        
-        .cta p {
-            max-width: 700px;
-            margin: 0 auto 40px;
-            color: rgba(255,255,255,0.9);
-            font-size: 18px;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 80px 0 30px;
             position: relative;
         }
         
-        footer:before {
+        .contact::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 10px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            height: 100%;
+            background: rgba(245, 245, 240, 0.9);
         }
         
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 40px;
-            margin-bottom: 50px;
-        }
-        
-        .footer-column {
-            flex: 1;
-            min-width: 200px;
-        }
-        
-        .footer-column h3 {
-            margin-bottom: 25px;
-            font-size: 20px;
+        .contact .container {
             position: relative;
-            padding-bottom: 10px;
+            z-index: 1;
         }
         
-        .footer-column h3:after {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 3px;
-            background: var(--primary);
-            bottom: 0;
-            left: 0;
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
         }
         
-        .footer-links {
-            list-style: none;
+        .contact-info h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--gold);
         }
         
-        .footer-links li {
-            margin-bottom: 12px;
+        .contact-details {
+            margin-bottom: 30px;
         }
         
-        .footer-links a {
-            color: #bbb;
-            text-decoration: none;
-            transition: all 0.3s;
-            display: inline-block;
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
         }
         
-        .footer-links a:hover {
-            color: var(--primary);
-            transform: translateX(5px);
+        .contact-icon {
+            font-size: 20px;
+            color: var(--gold);
+            margin-right: 15px;
+            margin-top: 5px;
         }
         
-        .footer-links a i {
-            margin-right: 8px;
-            color: var(--primary);
+        .contact-text h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
         }
         
         .social-links {
             display: flex;
             gap: 15px;
-            margin-top: 20px;
         }
         
-        .social-links a {
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--black);
+            color: var(--white);
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            color: white;
-            border-radius: 50%;
             transition: all 0.3s;
         }
         
-        .social-links a:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
+        .social-link:hover {
+            background: var(--gold);
+            color: var(--black);
+            transform: translateY(-5px);
         }
         
-        .footer-newsletter p {
-            color: #bbb;
-            margin-bottom: 15px;
+        .contact-form .form-group {
+            margin-bottom: 20px;
         }
         
-        .newsletter-form {
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 50px 0 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--gold), var(--dark-gold));
+        }
+        
+        .footer-logo {
+            font-family: 'Dancing Script', cursive;
+            font-size: 36px;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
             display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
         }
         
-        .newsletter-form input {
-            flex: 1;
-            padding: 12px 15px;
-            border: none;
-            border-radius: 30px 0 0 30px;
-            font-family: 'Open Sans', sans-serif;
+        .footer-links li {
+            margin: 0 15px;
         }
         
-        .newsletter-form button {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 0 20px;
-            border-radius: 0 30px 30px 0;
-            cursor: pointer;
-            transition: all 0.3s;
+        .footer-links a {
+            transition: color 0.3s;
         }
         
-        .newsletter-form button:hover {
-            background: var(--secondary);
+        .footer-links a:hover {
+            color: var(--gold);
         }
         
         .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #bbb;
-            font-size: 14px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         /* Responsive */
         @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 42px;
+            .hero-content h1 {
+                font-size: 56px;
             }
             
-            .hero p {
-                font-size: 18px;
-            }
-            
-            .steps {
+            .about-content {
                 flex-direction: column;
             }
             
-            .step {
-                max-width: 500px;
-                margin: 0 auto;
+            .about-img {
+                margin-bottom: 30px;
+            }
+            
+            .about::before {
+                width: 100%;
+                height: 40%;
+                top: auto;
+                bottom: 0;
             }
         }
         
         @media (max-width: 768px) {
-            .hero {
-                padding: 100px 0;
+            .hero-content h1 {
+                font-size: 42px;
             }
             
-            .hero h1 {
-                font-size: 36px;
-            }
-            
-            .hero-btns {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 250px;
-                margin-bottom: 15px;
+            .hero-content p {
+                font-size: 18px;
             }
             
             .nav-links {
                 display: none;
             }
             
-            .section {
-                padding: 70px 0;
-            }
-            
             .section-title h2 {
+                font-size: 36px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-content h1 {
                 font-size: 32px;
             }
             
-            .cta h2 {
-                font-size: 32px;
+            .btn {
+                display: block;
+                width: 80%;
+                margin: 10px auto;
             }
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        .floating {
-            animation: float 3s ease-in-out infinite;
+            
+            .footer-links li {
+                margin: 5px 10px;
+            }
         }
     </style>
 </head>
@@ -708,236 +678,307 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <nav>
-                <a href="#" class="logo">
-                    <i class="fas fa-hands-helping"></i>
-                    Gulf Travel Buddy
-                </a>
+            <div class="header-content">
+                <a href="#" class="logo">Hiba<span>Khudsia</span></a>
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#cities">Gulf Cities</a></li>
-                    <li><a href="#testimonials">Stories</a></li>
-                    <li><a href="#" class="btn btn-outline">Sign In</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="container">
-            <h1>Discover the Gulf with Local Friends</h1>
-            <p>Experience the real Arabia with handpicked local companions in Dubai, Riyadh, Doha and beyond. More than a tour guide - your new friend in the Gulf!</p>
-            <div class="hero-btns">
-                <a href="#" class="btn btn-primary">Find Your Gulf Buddy</a>
-                <a href="#" class="btn btn-accent">Become a Local Guide</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="section" id="how-it-works">
-        <div class="container">
-            <div class="section-title">
-                <h2>How Gulf Travel Buddy Works</h2>
-                <p>Connect with trusted locals in the Arabian Gulf who will show you their culture, traditions and hidden gems</p>
-            </div>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-icon">
-                        <i class="fas fa-mosque"></i>
-                    </div>
-                    <h3>Choose Your Experience</h3>
-                    <p>Select from cultural immersions, desert adventures, souk shopping companions, or foodie guides.</p>
-                </div>
-                <div class="step">
-                    <div class="step-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <h3>Book Your Local Buddy</h3>
-                    <p>View verified profiles with reviews and book directly through our secure platform.</p>
-                </div>
-                <div class="step">
-                    <div class="step-icon">
-                        <i class="fas fa-smile-beam"></i>
-                    </div>
-                    <h3>Experience Authentic Arabia</h3>
-                    <p>Meet your buddy and discover the Gulf through the eyes of those who call it home.</p>
+            <div class="hero-content">
+                <h1>Luxury Arabic Calligraphy & Engraving</h1>
+                <p>Elevating brands with exquisite handwritten artistry and precision engraving services across Saudi Arabia</p>
+                <div>
+                    <a href="#contact" class="btn btn-gold">Book a Consultation</a>
+                    <a href="#portfolio" class="btn btn-outline">View My Work</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Cities -->
-    <section class="section cities" id="cities">
+    <!-- About Section -->
+    <section class="about" id="about">
         <div class="container">
             <div class="section-title">
-                <h2>Explore Gulf Cities</h2>
-                <p>Our local buddies are ready to show you the real Arabia in these amazing destinations</p>
+                <h2>About Me</h2>
             </div>
-            <div class="city-grid">
-                <div class="city-card">
-                    <div class="city-img" style="background-image: url('https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                    <div class="city-tag">Most Popular</div>
-                    <div class="city-info">
-                        <h3>Dubai, UAE</h3>
-                        <p>From Burj Khalifa to hidden desert spots, experience Dubai beyond the glitz.</p>
-                        <a href="#" class="btn btn-outline">Meet Dubai Buddies</a>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Hiba Khudsia Siddiqua">
+                </div>
+                <div class="about-text">
+                    <h3>Hiba Khudsia Siddiqua</h3>
+                    <p>With over a decade of experience in luxury Arabic calligraphy and engraving, I specialize in creating bespoke handwritten pieces and precision engravings for elite brands and discerning clients across Saudi Arabia.</p>
+                    <p>My work has graced products and events for Montblanc, Swarovski, Rituals, Sephora, Bath & Body Works, and other prestigious brands, bringing an unparalleled level of artistry and craftsmanship to every project.</p>
+                    <p>Based in Khobar but serving clients throughout the Eastern Province and across KSA, I combine traditional Islamic calligraphy techniques with contemporary aesthetics to create timeless pieces that elevate any brand experience.</p>
+                    <div class="signature">Hiba Khudsia</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Services</h2>
+                <p>Custom solutions for luxury brands and special events</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Luxury Brand Calligraphy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Luxury Brand Calligraphy</h3>
+                        <p>Bespoke Arabic calligraphy for product packaging, store signage, and marketing materials that elevate your brand's aesthetic.</p>
                     </div>
                 </div>
-                <div class="city-card">
-                    <div class="city-img" style="background-image: url('https://images.unsplash.com/photo-1586768222354-920bcf0a3c0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                    <div class="city-info">
-                        <h3>Riyadh, Saudi Arabia</h3>
-                        <p>Discover the cultural heart of Saudi Arabia with local insiders.</p>
-                        <a href="#" class="btn btn-outline">Meet Riyadh Buddies</a>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Product Engraving">
+                    </div>
+                    <div class="service-content">
+                        <h3>Premium Product Engraving</h3>
+                        <p>Precision Arabic engraving on leather, glass, metal, and wood for luxury goods, corporate gifts, and special editions.</p>
                     </div>
                 </div>
-                <div class="city-card">
-                    <div class="city-img" style="background-image: url('https://images.unsplash.com/photo-1571805618149-3a772570eb4d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                    <div class="city-info">
-                        <h3>Doha, Qatar</h3>
-                        <p>Explore traditional souks and modern marvels with Qatari friends.</p>
-                        <a href="#" class="btn btn-outline">Meet Doha Buddies</a>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Event Calligraphy">
                     </div>
-                </div>
-                <div class="city-card">
-                    <div class="city-img" style="background-image: url('https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                    <div class="city-tag">New Destination</div>
-                    <div class="city-info">
-                        <h3>Muscat, Oman</h3>
-                        <p>Experience Omani hospitality and breathtaking natural beauty.</p>
-                        <a href="#" class="btn btn-outline">Meet Muscat Buddies</a>
+                    <div class="service-content">
+                        <h3>Exclusive Event Calligraphy</h3>
+                        <p>Live Arabic calligraphy demonstrations and personalized place cards, invitations, and signage for high-profile events.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="section testimonials" id="testimonials">
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
         <div class="container">
             <div class="section-title">
-                <h2>Traveler Stories from the Gulf</h2>
-                <p>Hear from visitors who discovered the real Arabia with local buddies</p>
+                <h2>Portfolio</h2>
+                <p>A selection of my recent work for luxury brands and private clients</p>
             </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        My Dubai buddy Ahmed took me to the most incredible hidden desert spots no tour goes to. We drank karak chai with Bedouins and watched the sunset over the dunes. This was the real UAE experience I was hoping for!
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-img">
+                        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Montblanc Collection">
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-img" style="background-image: url('https://randomuser.me/api/portraits/women/65.jpg');"></div>
-                        <div class="author-info">
-                            <h4>Sophie Müller</h4>
-                            <p>Traveler from Germany</p>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                    <div class="portfolio-overlay">
+                        <h3>Montblanc Leather Collection</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img">
+                        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Swarovski Engraving">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Swarovski Crystal Engraving</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img">
+                        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="VIP Event">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>VIP Event Calligraphy</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img">
+                        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Brand Packaging">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Luxury Brand Packaging</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img">
+                        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Corporate Gifts">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Personalized Corporate Gifts</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img">
+                        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Wedding Calligraphy">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Luxury Wedding Calligraphy</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients">
+        <div class="container">
+            <div class="section-title">
+                <h2>Brands I've Worked With</h2>
+            </div>
+            <div class="clients-grid">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Montblanc_Logo.svg/1200px-Montblanc_Logo.svg.png" alt="Montblanc" class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Swarovski_logo.svg/1200px-Swarovski_logo.svg.png" alt="Swarovski" class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Rituals_logo.svg/1200px-Rituals_logo.svg.png" alt="Rituals" class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Sephora_logo.svg/1200px-Sephora_logo.svg.png" alt="Sephora" class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bath_%26_Body_Works_logo.svg/1200px-Bath_%26_Body_Works_logo.svg.png" alt="Bath & Body Works" class="client-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="instagram">
+        <div class="container">
+            <div class="section-title">
+                <h2>Recent Work</h2>
+                <p>Follow my creative process on Instagram <a href="https://www.instagram.com/shades.of.me93/" target="_blank" style="color: var(--gold);">@shades.of.me93</a></p>
+            </div>
+            <div class="instagram-feed">
+                <!-- Instagram posts would be loaded here via API -->
+                <div class="instagram-post">
+                    <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Calligraphy Work">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="instagram-post">
+                    <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Engraving Work">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="instagram-post">
+                    <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Brand Work">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="instagram-post">
+                    <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Event Work">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Available for commissions across Saudi Arabia</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Details</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Khobar, Eastern Province, Saudi Arabia</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p><a href="tel:+966560405291">+966 56 040 5291</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p><a href="mailto:khudsiasiddiqui@gmail.com">khudsiasiddiqui@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        As a solo female traveler, I was nervous about visiting Saudi Arabia. My Riyadh buddy Nora made me feel completely safe and showed me places I never would have found alone. We had the best kabsa in the city!
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-img" style="background-image: url('https://randomuser.me/api/portraits/women/33.jpg');"></div>
-                        <div class="author-info">
-                            <h4>Jessica Chen</h4>
-                            <p>Traveler from Singapore</p>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
+                    <h3>Follow Me</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/shades.of.me93/" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        I became a buddy because I love showing visitors the real Qatar beyond the World Cup. It's amazing to see their faces when they try majboos for the first time or experience traditional dhow sailing.
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-img" style="background-image: url('https://randomuser.me/api/portraits/men/22.jpg');"></div>
-                        <div class="author-info">
-                            <h4>Khalid Al-Thani</h4>
-                            <p>Local Buddy in Doha</p>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gold">Send Message</button>
+                    </form>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta">
-        <div class="container">
-            <h2>Ready for an Authentic Gulf Experience?</h2>
-            <p>Join our community of travelers and locals creating meaningful connections across Arabia</p>
-            <a href="#" class="btn btn-primary">Start Your Journey Today</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Gulf Travel Buddy</h3>
-                    <p>Connecting travelers with local friends across the Arabian Peninsula for authentic cultural experiences.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-snapchat"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>For Travelers</h3>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> How It Works</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Safety Guidelines</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Gulf Culture Tips</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Travel Stories</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>For Buddies</h3>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Become a Buddy</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Cultural Guidelines</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Earnings</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Buddy Resources</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Dubai, UAE</a></li>
-                        <li><a href="#"><i class="fas fa-phone"></i> +971 50 123 4567</a></li>
-                        <li><a href="#"><i class="fas fa-envelope"></i> hello@gulftravelbuddy.com</a></li>
-                    </ul>
-                </div>
-            </div>
+            <div class="footer-logo">Hiba Khudsia</div>
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
             <div class="copyright">
-                <p>&copy; 2023 Gulf Travel Buddy. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                <p>&copy; 2023 Hiba Khudsia Siddiqua. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Lightbox Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        // Simple smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Instagram feed would be loaded here via API in a real implementation
+    </script>
 </body>
 </html>
