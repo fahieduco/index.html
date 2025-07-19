@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hiba Siddiqua | Professional Calligrapher & Engraver</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&family=Parisienne&family=Alex+Brush&family=La+Belle+Aurore&display=swap" rel="stylesheet">
     <style>
         /* Modern Luxury Style */
         :root {
@@ -18,7 +17,7 @@
         }
         
         body {
-            font-family: 'Montserrat', Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
             color: var(--black);
@@ -26,18 +25,6 @@
             line-height: 1.6;
         }
         
-        /* Brand-specific fonts */
-        .montblanc { font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: 1px; }
-        .sephora { font-family: 'Montserrat', sans-serif; font-weight: 600; letter-spacing: 0.5px; }
-        .loccitane { font-family: 'Parisienne', cursive; font-size: 1.2em; }
-        .byredo { font-family: 'Montserrat', sans-serif; font-weight: 300; letter-spacing: 2px; text-transform: uppercase; }
-        .bath-body-works { font-family: 'Alex Brush', cursive; font-size: 1.3em; }
-        .lenskart { font-family: 'Montserrat', sans-serif; font-weight: 600; }
-        .american-eagle { font-family: 'Montserrat', sans-serif; font-weight: 600; letter-spacing: 1px; }
-        .home-centre { font-family: 'La Belle Aurore', cursive; font-size: 1.2em; }
-        .nesma { font-family: 'Playfair Display', serif; font-weight: 700; }
-        .sab { font-family: 'Montserrat', sans-serif; font-weight: 600; }
-        ![Image](https://github.com/user-attachments/assets/719237ac-76ae-4da7-9634-58c6af1db7e4)
         header {
             background-color: var(--black);
             color: var(--white);
@@ -168,34 +155,12 @@
             text-align: center;
         }
         
-        .client-names {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin-top: 2rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .client-name {
-            padding: 1rem 1.5rem;
-            border-radius: 4px;
-            transition: all 0.3s;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-            background-color: var(--light-beige);
-        }
-        
-        .client-name:hover {
-            transform: translateY(-5px);
+        .brands-collage {
+            max-width: 800px;
+            width: 100%;
+            margin: 2rem auto;
+            border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .client-name a {
-            color: var(--black);
-            text-decoration: none;
-            font-size: 1.1rem;
         }
         
         .instagram-cta {
@@ -407,12 +372,8 @@
                 flex-direction: column;
             }
             
-            .client-names {
-                gap: 1rem;
-            }
-            
-            .client-name {
-                padding: 0.8rem 1rem;
+            .brands-collage {
+                max-width: 100%;
             }
         }
     </style>
@@ -448,18 +409,9 @@
     <section class="clients">
         <div class="container">
             <h2 class="section-title">Trusted By Premium Brands</h2>
-            <div class="client-names">
-                <div class="client-name montblanc"><a href="https://www.montblanc.com" target="_blank">Montblanc</a></div>
-                <div class="client-name sephora"><a href="https://www.sephora.com" target="_blank">Sephora</a></div>
-                <div class="client-name loccitane"><a href="https://www.loccitane.com" target="_blank">L'OCCITANE</a></div>
-                <div class="client-name byredo"><a href="https://www.byredo.com" target="_blank">BYREDO</a></div>
-                <div class="client-name bath-body-works"><a href="https://www.bathandbodyworks.com" target="_blank">Bath & Body Works</a></div>
-                <div class="client-name lenskart"><a href="https://www.lenskart.com" target="_blank">Lenskart</a></div>
-                <div class="client-name american-eagle"><a href="https://www.ae.com" target="_blank">American Eagle</a></div>
-                <div class="client-name home-centre"><a href="https://www.homecentre.com" target="_blank">Home Centre</a></div>
-                <div class="client-name nesma"><a href="https://www.nesma.com" target="_blank">Nesma & Partners</a></div>
-                <div class="client-name sab"><a href="https://www.sab.com" target="_blank">Sab Al Awwal Group</a></div>
-            </div>
+            
+            <!-- Brand collage image -->
+            <img src="Picture1.png" alt="Premium brands Hiba Siddiqua has worked with" class="brands-collage">
             
             <div class="instagram-cta">
                 <h3>Want to see my work with these brands?</h3>
