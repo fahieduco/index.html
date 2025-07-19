@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hiba Siddiqua | Professional Calligrapher & Engraver</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Modern Luxury Style */
         :root {
-            --gold: #D4AF37;
-            --black: #111111;
-            --white: #F9F9F9;
-            --light-beige: #F5F0E6;
+            --gold: #C6A769;
+            --dark-gold: #B08D57;
+            --black: #121212;
+            --white: #F8F5F0;
+            --light-beige: #F1ECE4;
+            --cream: #F9F6EF;
         }
         
         body {
@@ -30,6 +33,7 @@
             width: 100%;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         .container {
@@ -48,6 +52,7 @@
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--gold);
+            letter-spacing: 1px;
         }
         
         .nav-links {
@@ -60,6 +65,7 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
+            font-size: 1.05rem;
         }
         
         .nav-links a:hover {
@@ -68,27 +74,46 @@
         
         .hero {
             height: 100vh;
-            background-color: var(--light-beige);
+            background: linear-gradient(135deg, var(--light-beige) 0%, var(--cream) 100%);
             display: flex;
             align-items: center;
             text-align: center;
             margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1560169897-fc0cdbdfa4d5?ixlib=rb-4.0.3') center/cover no-repeat;
+            opacity: 0.05;
+            z-index: 0;
         }
         
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem;
+            position: relative;
+            z-index: 1;
         }
         
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
         
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
+            color: #555;
         }
         
         .btn {
@@ -100,16 +125,28 @@
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
         }
         
         .btn:hover {
-            background-color: var(--white);
+            background-color: var(--dark-gold);
             transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .btn-instagram {
-            background-color: #E1306C;
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
             color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .btn-instagram i {
+            font-size: 1.2rem;
         }
         
         .clients {
@@ -122,26 +159,45 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 3rem;
+            gap: 2rem;
             margin-top: 2rem;
+            align-items: center;
         }
         
-        .client-name {
-            font-size: 1.2rem;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            transition: all 0.3s;
+        .client-logo {
+            height: 60px;
+            width: auto;
+            max-width: 150px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
         }
         
-        .client-name:hover {
-            border-color: var(--gold);
-            transform: translateY(-3px);
+        .client-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.05);
         }
         
-        .client-name a {
-            color: inherit;
+        .instagram-cta {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background-color: var(--light-beige);
+            border-radius: 8px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .instagram-cta h3 {
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+        
+        .instagram-cta a {
+            color: #E1306C;
+            font-weight: 600;
             text-decoration: none;
         }
         
@@ -170,7 +226,8 @@
         .about-image img {
             max-width: 100%;
             border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border: 10px solid var(--white);
         }
         
         .section-title {
@@ -179,6 +236,7 @@
             color: var(--black);
             position: relative;
             text-align: center;
+            font-weight: 600;
         }
         
         .section-title:after {
@@ -209,13 +267,25 @@
             border-radius: 8px;
             padding: 2rem;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 3px solid var(--gold);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
         
         .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
             color: var(--gold);
+        }
+        
+        .service-card h3 {
+            margin-bottom: 1.5rem;
+            font-weight: 600;
         }
         
         .contact {
@@ -237,27 +307,33 @@
         
         .contact-item {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 1rem;
         }
         
         .contact-icon {
             font-size: 1.5rem;
             color: var(--gold);
+            margin-top: 3px;
         }
         
         footer {
             background-color: var(--black);
             color: var(--white);
-            padding: 2rem 0;
+            padding: 3rem 0 2rem;
             text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
         }
         
         .social-links {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
-            margin: 1rem 0;
+            margin: 1.5rem 0;
         }
         
         .social-links a {
@@ -265,6 +341,9 @@
             font-size: 1.5rem;
             transition: color 0.3s;
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         
         .social-links a:hover {
@@ -283,17 +362,36 @@
             color: var(--gold);
         }
         
+        .follow-instagram {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: rgba(0,0,0,0.05);
+            border-radius: 8px;
+        }
+        
+        .follow-instagram a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #E1306C;
+            font-weight: 600;
+        }
+        
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
             
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
             .about-content {
                 flex-direction: column;
+            }
+            
+            .client-logo {
+                height: 40px;
             }
         }
     </style>
@@ -308,7 +406,7 @@
                     <a href="#about">About</a>
                     <a href="#services">Services</a>
                     <a href="#contact">Contact</a>
-                    <a href="https://instagram.com/shades.of.me93" class="btn btn-instagram">Book on Instagram</a>
+                    <a href="https://instagram.com/shades.of.me93" class="btn btn-instagram"><i class="fab fa-instagram"></i> Book Now</a>
                 </div>
             </nav>
         </div>
@@ -316,11 +414,12 @@
 
     <section class="hero" id="home">
         <div class="hero-content">
-            <div class="calligraphy-symbol">✒️</div>
+            <div class="calligraphy-symbol"><i class="fas fa-pen-nib"></i></div>
             <h1>Elevate Your Brand with Artistic Calligraphy & Engraving</h1>
             <p>Professional services for PR events, brand activations & corporate gatherings across Saudi Arabia</p>
-            <div style="display: flex; gap: 1rem; justify-content: center;">
-                <a href="https://instagram.com/shades.of.me93" target="_blank" class="btn btn-instagram">Book via Instagram</a>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://instagram.com/shades.of.me93" target="_blank" class="btn btn-instagram"><i class="fab fa-instagram"></i> Book via Instagram</a>
+                <a href="#contact" class="btn">Contact Directly</a>
             </div>
         </div>
     </section>
@@ -329,20 +428,20 @@
         <div class="container">
             <h2 class="section-title">Trusted By Premium Brands</h2>
             <div class="client-logos">
-                <div class="client-name"><a href="https://www.montblanc.com" target="_blank">Montblanc</a></div>
-                <div class="client-name"><a href="https://www.sephora.sa" target="_blank">Sephora Saudi Arabia</a></div>
-                <div class="client-name"><a href="https://sa.loccitane.com" target="_blank">L'Occitane en Provence</a></div>
-                <div class="client-name"><a href="https://www.byredo.com" target="_blank">Byredo</a></div>
-                <div class="client-name"><a href="https://www.bathandbodyworks.com.sa" target="_blank">Bath & Body Works</a></div>
-                <div class="client-name"><a href="https://www.lenskart.com/sa" target="_blank">Lenskart Middle East</a></div>
-                <div class="client-name"><a href="https://https://www.americaneagle.com.sa//saudi-arabia" target="_blank">American Eagle Saudi Arabia</a></div>
-                <div class="client-name"><a href="https://www.homecentre.com/sa" target="_blank">Home Centre Saudi Arabia</a></div>
-                <div class="client-name"><a href="https://www.nesma.com" target="_blank">Nesma & Partners</a></div>
-                <div class="client-name"><a href="https://www.sab.com/en/personal" target="_blank">Sab Al Awwal Group</a></div>
-                <div class="client-name"><a href="https://whitegarden.com.sa" target="_blank">White Garden Cafe</a></div>
-                <div class="client-name"><a href="https://www.matchfashion.com" target="_blank">MATCHESFASHION</a></div>
-                <div class="client-name"><a href="https://www.jhah.com" target="_blank">Jhah</a></div>
-                <div class="client-name"><a href="https://www.laurebeauty.com" target="_blank">Laure Beauty</a></div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Montblanc_Logo.svg/2560px-Montblanc_Logo.svg.png" alt="Montblanc" class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Sephora_logo.svg/1200px-Sephora_logo.svg.png" alt="Sephora" class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/L%27Occitane_logo.svg/2560px-L%27Occitane_logo.svg.png" alt="L'Occitane" class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Byredo_logo.svg/1200px-Byredo_logo.svg.png" alt="Byredo" class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Bath_%26_Body_Works_logo.svg/1200px-Bath_%26_Body_Works_logo.svg.png" alt="Bath & Body Works" class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Lenskart_logo.svg/1200px-Lenskart_logo.svg.png" alt="Lenskart" class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/American_Eagle_Outfitters_logo.svg/1200px-American_Eagle_Outfitters_logo.svg.png" alt="American Eagle" class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Home_Centre_logo.svg/1200px-Home_Centre_logo.svg.png" alt="Home Centre" class="client-logo">
+            </div>
+            
+            <div class="instagram-cta">
+                <h3>Want to see my work?</h3>
+                <p>Follow me on Instagram <a href="https://instagram.com/shades.of.me93" target="_blank">@shades.of.me93</a> to view my portfolio of calligraphy and engraving projects for these premium brands.</p>
+                <p>While we're working to add my work directly to this platform, Instagram is currently the best place to see examples of my craftsmanship.</p>
             </div>
         </div>
     </section>
@@ -355,11 +454,14 @@
                     <img src="https://github.com/user-attachments/assets/ab192329-470a-4c21-86dd-0e0707f596ef" alt="Hiba Siddiqua - Professional Calligrapher" />
                 </div>
                 <div class="about-text">
-                    <div class="calligraphy-symbol">🖋️</div>
+                    <div class="calligraphy-symbol"><i class="fas fa-paint-brush"></i></div>
                     <p>Hiba Siddiqua is a professional calligrapher and engraver specializing in luxury brand experiences across Saudi Arabia.</p>
                     <p>With refined expertise in both traditional and contemporary techniques, I create bespoke calligraphy and precision engraving for premium products, corporate gifts, and special events.</p>
                     <p>My work focuses on transforming ordinary items into personalized treasures through meticulous craftsmanship and artistic vision.</p>
-                    <p>See my work on Instagram: <a href="https://instagram.com/shades.of.me93" target="_blank" class="instagram-handle">@shades.of.me93</a></p>
+                    
+                    <div class="follow-instagram">
+                        <p><i class="fas fa-camera"></i> Follow my Instagram to see recent projects: <a href="https://instagram.com/shades.of.me93" target="_blank" class="instagram-handle"><i class="fab fa-instagram"></i> @shades.of.me93</a></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -370,40 +472,45 @@
             <h2 class="section-title">My Services</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">✒️</div>
+                    <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
                     <h3>Calligraphy Services</h3>
                     <ul style="text-align: left; padding-left: 1.5rem;">
-                        <li>Live event calligraphy</li>
-                        <li>Custom place cards</li>
-                        <li>Branded signage</li>
-                        <li>Luxury packaging</li>
-                        <li>Wedding calligraphy</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 8px;"></i> Live event calligraphy</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 8px;"></i> Custom place cards</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 8px;"></i> Branded signage</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 8px;"></i> Luxury packaging</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 8px;"></i> Wedding calligraphy</li>
                     </ul>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">🔖</div>
+                    <div class="service-icon"><i class="fas fa-engraving"></i></div>
                     <h3>Engraving Services</h3>
                     <ul style="text-align: left; padding-left: 1.5rem;">
-                        <li>Product personalization</li>
-                        <li>Corporate awards</li>
-                        <li>Executive gifts</li>
-                        <li>Jewelry engraving</li>
-                        <li>Leather goods</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 8px;"></i> Product personalization</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 8px;"></i> Corporate awards</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 8px;"></i> Executive gifts</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 8px;"></i> Jewelry engraving</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 8px;"></i> Leather goods</li>
                     </ul>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">🎨</div>
+                    <div class="service-icon"><i class="fas fa-store-alt"></i></div>
                     <h3>Brand Experiences</h3>
                     <ul style="text-align: left; padding-left: 1.5rem;">
-                        <li>Pop-up calligraphy stations</li>
-                        <li>Product launch activations</li>
-                        <li>VIP customer events</li>
-                        <li>Team-building workshops</li>
-                        <li>Retail personalization</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 8px;"></i> Pop-up calligraphy stations</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 8px;"></i> Product launch activations</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 8px;"></i> VIP customer events</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 8px;"></i> Team-building workshops</li>
+                        <li><i class="fas fa-check" style="color: var(--gold); margin-right: 8px;"></i> Retail personalization</li>
                     </ul>
                 </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p>See examples of these services on my Instagram:</p>
+                <a href="https://instagram.com/shades.of.me93" target="_blank" class="btn btn-instagram" style="margin-top: 1rem;"><i class="fab fa-instagram"></i> View Portfolio</a>
             </div>
         </div>
     </section>
@@ -415,7 +522,7 @@
                 <div class="contact-info">
                     <h3>Contact Information</h3>
                     <div class="contact-item">
-                        <span class="contact-icon">✉️</span>
+                        <span class="contact-icon"><i class="fas fa-envelope"></i></span>
                         <div>
                             <h4>Email</h4>
                             <p>khudsiasiddiqua@gmail.com</p>
@@ -423,7 +530,7 @@
                     </div>
                     
                     <div class="contact-item">
-                        <span class="contact-icon">📱</span>
+                        <span class="contact-icon"><i class="fas fa-mobile-alt"></i></span>
                         <div>
                             <h4>Mobile</h4>
                             <p>0560405291</p>
@@ -431,7 +538,7 @@
                     </div>
                     
                     <div class="contact-item">
-                        <span class="contact-icon">📍</span>
+                        <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
                         <div>
                             <h4>Service Areas</h4>
                             <p>Available throughout Saudi Arabia</p>
@@ -439,7 +546,7 @@
                     </div>
                     
                     <div class="contact-item">
-                        <span class="contact-icon">📷</span>
+                        <span class="contact-icon"><i class="fab fa-instagram"></i></span>
                         <div>
                             <h4>Instagram</h4>
                             <p><a href="https://instagram.com/shades.of.me93" target="_blank" class="instagram-handle">@shades.of.me93</a></p>
@@ -449,8 +556,12 @@
                 
                 <div style="text-align: center;">
                     <h3>Book Your Service</h3>
-                    <p>For bookings, please contact me via Instagram:</p>
-                    <a href="https://instagram.com/shades.of.me93" target="_blank" class="btn btn-instagram" style="margin-top: 1rem;">Message on Instagram</a>
+                    <p>The fastest way to book is through Instagram DM:</p>
+                    <a href="https://instagram.com/shades.of.me93" target="_blank" class="btn btn-instagram" style="margin-top: 1rem;"><i class="fab fa-instagram"></i> Message on Instagram</a>
+                    
+                    <div style="margin-top: 2rem;">
+                        <p><i class="fas fa-images" style="color: var(--gold);"></i> Don't forget to follow my Instagram to see my latest work!</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -458,14 +569,15 @@
 
     <footer>
         <div class="container">
-            <div class="logo">Hiba Siddiqua</div>
-            <p>Professional Calligraphy & Engraving Services</p>
-            <div class="social-links">
-                <a href="https://instagram.com/shades.of.me93" target="_blank" title="Instagram">📷 Instagram</a>
+            <div class="footer-content">
+                <div class="logo">Hiba Siddiqua</div>
+                <p>Professional Calligraphy & Engraving Services</p>
+                <div class="social-links">
+                    <a href="https://instagram.com/shades.of.me93" target="_blank" title="Instagram"><i class="fab fa-instagram"></i> Follow @shades.of.me93</a>
+                </div>
+                <p>&copy; 2023 Hiba Siddiqua. All rights reserved.</p>
             </div>
-            <p>&copy; 2023 Hiba Siddiqua. All rights reserved.</p>
         </div>
     </footer>
 </body>
 </html>
-
