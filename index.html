@@ -68,7 +68,7 @@
         
         .hero {
             height: 100vh;
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.imgur.com/JqYeARW.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -117,6 +117,11 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
+        }
+        
+        .btn-booking {
+            background-color: #25D366;
+            color: white;
         }
         
         .clients {
@@ -337,6 +342,57 @@
             font-weight: 600;
         }
         
+        .booking-form {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        
+        .booking-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .booking-option {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .booking-option:hover {
+            border-color: var(--gold);
+        }
+        
+        .booking-option.selected {
+            border-color: var(--gold);
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+        
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -367,6 +423,7 @@
                     <a href="#services">Services</a>
                     <a href="#portfolio">Portfolio</a>
                     <a href="#contact">Contact</a>
+                    <a href="#booking" class="btn btn-booking">Book a Slot</a>
                 </div>
             </nav>
         </div>
@@ -377,7 +434,7 @@
             <h1>Elevate Your Brand with Artistic Calligraphy & Engraving</h1>
             <p>Professional services for PR events, brand activations & corporate gatherings across Saudi Arabia</p>
             <div style="display: flex; gap: 1rem; justify-content: center;">
-                <a href="#contact" class="btn">Book Your Service</a>
+                <a href="#booking" class="btn">Book Your Service</a>
                 <a href="https://instagram.com/shades.of.me93" target="_blank" class="btn btn-instagram">
                     <span>Follow on Instagram</span>
                 </a>
@@ -410,7 +467,7 @@
     <section class="about" id="about">
         <div class="container">
             <div class="about-img">
-                <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Hiba Siddiqua - Professional Calligrapher">
+                <img src="https://i.imgur.com/JqYeARW.jpg" alt="Hiba Siddiqua - Professional Calligrapher">
             </div>
             <div class="about-content">
                 <h2 class="section-title">About Me</h2>
@@ -428,7 +485,7 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Calligraphy Services">
+                        <img src="https://i.imgur.com/JqYeARW.jpg" alt="Calligraphy Services">
                     </div>
                     <div class="service-content">
                         <h3>Calligraphy Services</h3>
@@ -444,7 +501,7 @@
                 
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1611270630255-0e9c7b067b33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Engraving Services">
+                        <img src="https://i.imgur.com/JqYeARW.jpg" alt="Engraving Services">
                     </div>
                     <div class="service-content">
                         <h3>Engraving Services</h3>
@@ -460,7 +517,7 @@
                 
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Brand Experiences">
+                        <img src="https://i.imgur.com/JqYeARW.jpg" alt="Brand Experiences">
                     </div>
                     <div class="service-content">
                         <h3>Brand Experiences</h3>
@@ -483,7 +540,7 @@
             <p style="text-align: center; margin-bottom: 2rem;">View more on <a href="https://instagram.com/shades.of.me93" target="_blank" class="instagram-handle">Instagram @shades.of.me93</a></p>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Arabic Calligraphy">
+                    <img src="https://i.imgur.com/JqYeARW.jpg" alt="Arabic Calligraphy">
                     <div class="portfolio-overlay">
                         <h3>Arabic Calligraphy</h3>
                         <p>Traditional ink on premium paper</p>
@@ -491,7 +548,7 @@
                 </div>
                 
                 <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1611270630255-0e9c7b067b33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Leather Engraving">
+                    <img src="https://i.imgur.com/JqYeARW.jpg" alt="Leather Engraving">
                     <div class="portfolio-overlay">
                         <h3>Leather Engraving</h3>
                         <p>Personalized luxury journal</p>
@@ -499,7 +556,7 @@
                 </div>
                 
                 <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Glass Engraving">
+                    <img src="https://i.imgur.com/JqYeARW.jpg" alt="Glass Engraving">
                     <div class="portfolio-overlay">
                         <h3>Glass Engraving</h3>
                         <p>Custom perfume bottle</p>
@@ -507,7 +564,7 @@
                 </div>
                 
                 <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1568219656418-15c329312bf1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Metal Engraving">
+                    <img src="https://i.imgur.com/JqYeARW.jpg" alt="Metal Engraving">
                     <div class="portfolio-overlay">
                         <h3>Metal Engraving</h3>
                         <p>Executive pen personalization</p>
@@ -515,7 +572,7 @@
                 </div>
                 
                 <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Event Calligraphy">
+                    <img src="https://i.imgur.com/JqYeARW.jpg" alt="Event Calligraphy">
                     <div class="portfolio-overlay">
                         <h3>Event Calligraphy</h3>
                         <p>Live guest name writing</p>
@@ -523,12 +580,63 @@
                 </div>
                 
                 <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Packaging Design">
+                    <img src="https://i.imgur.com/JqYeARW.jpg" alt="Packaging Design">
                     <div class="portfolio-overlay">
                         <h3>Packaging Design</h3>
                         <p>Luxury gift box calligraphy</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking" id="booking">
+        <div class="container">
+            <h2 class="section-title">Book Your Slot</h2>
+            <div class="booking-form">
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Type</label>
+                        <select id="service" required>
+                            <option value="">Select a service</option>
+                            <option value="calligraphy">Calligraphy Services</option>
+                            <option value="engraving">Engraving Services</option>
+                            <option value="brand">Brand Experiences</option>
+                            <option value="workshop">Workshops</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Time Slot</label>
+                        <div class="booking-options">
+                            <div class="booking-option" data-time="09:00-11:00">Morning (9AM-11AM)</div>
+                            <div class="booking-option" data-time="11:00-13:00">Late Morning (11AM-1PM)</div>
+                            <div class="booking-option" data-time="14:00-16:00">Afternoon (2PM-4PM)</div>
+                            <div class="booking-option" data-time="16:00-18:00">Evening (4PM-6PM)</div>
+                        </div>
+                        <input type="hidden" id="selectedTime">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Notes</label>
+                        <textarea id="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Confirm Booking</button>
+                </form>
             </div>
         </div>
     </section>
@@ -604,5 +712,42 @@
             <p>&copy; 2023 Shades of Me. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Booking form functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const bookingOptions = document.querySelectorAll('.booking-option');
+            const selectedTimeInput = document.getElementById('selectedTime');
+            
+            bookingOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove selected class from all options
+                    bookingOptions.forEach(opt => opt.classList.remove('selected'));
+                    
+                    // Add selected class to clicked option
+                    this.classList.add('selected');
+                    
+                    // Set the hidden input value
+                    selectedTimeInput.value = this.getAttribute('data-time');
+                });
+            });
+            
+            // Form submission
+            const bookingForm = document.getElementById('bookingForm');
+            bookingForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (!selectedTimeInput.value) {
+                    alert('Please select a time slot');
+                    return;
+                }
+                
+                // Here you would typically send the form data to a server
+                alert('Booking request submitted! We will contact you shortly to confirm.');
+                bookingForm.reset();
+                bookingOptions.forEach(opt => opt.classList.remove('selected'));
+            });
+        });
+    </script>
 </body>
 </html>
