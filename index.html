@@ -3,310 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hiba Khudsia Siddiqua | Luxury Calligrapher & Engraver</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Lightbox for gallery -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <title>Shades of Me | Professional Calligrapher & Engraver</title>
     <style>
+        /* Modern Luxury Style */
         :root {
             --gold: #D4AF37;
-            --black: #1A1A1A;
-            --white: #FFFFFF;
-            --cream: #F5F5F0;
-            --dark-gold: #B8860B;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            --black: #111111;
+            --white: #F9F9F9;
+            --light-beige: #F5F0E6;
         }
         
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--cream);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             color: var(--black);
-            line-height: 1.8;
-            overflow-x: hidden;
+            background-color: var(--white);
+            line-height: 1.6;
         }
         
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            color: var(--black);
-        }
-        
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        /* Header */
         header {
             background-color: var(--black);
             color: var(--white);
-            padding: 20px 0;
+            padding: 1rem 0;
             position: fixed;
             width: 100%;
+            top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
         }
         
         .container {
+            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
         }
         
-        .header-content {
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
         .logo {
-            font-family: 'Dancing Script', cursive;
-            font-size: 28px;
+            font-size: 1.8rem;
+            font-weight: 700;
             color: var(--gold);
-        }
-        
-        .logo span {
-            color: var(--white);
         }
         
         .nav-links {
             display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 30px;
+            gap: 2rem;
         }
         
         .nav-links a {
-            font-weight: 600;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
             transition: color 0.3s;
-            position: relative;
         }
         
         .nav-links a:hover {
             color: var(--gold);
         }
         
-        .nav-links a:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: var(--gold);
-            bottom: -5px;
-            left: 0;
-            transition: width 0.3s;
-        }
-        
-        .nav-links a:hover:after {
-            width: 100%;
-        }
-        
-        /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                        url('https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3');
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://scontent.cdninstagram.com/v/t39.30808-6/432691718_1222155762132336_7270219826714534270_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=101&_nc_ohc=3Q8WzQz3xGcAX8QzJj1&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzI1ODk0ODQ0MDY1MTQxODQ5MA%3D%3D.2-ccb7-5&oh=00_AfDpW1Y9Q5F8Jpz8X3L3v5K5v5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q&oe=660B9B9F&_nc_sid=10d13b');
             background-size: cover;
             background-position: center;
             display: flex;
             align-items: center;
             text-align: center;
             color: var(--white);
-            padding-top: 80px;
+            margin-top: 60px;
         }
         
-        .hero-content h1 {
-            font-size: 72px;
-            margin-bottom: 20px;
-            color: var(--gold);
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
         }
         
-        .hero-content p {
-            font-size: 22px;
-            max-width: 700px;
-            margin: 0 auto 30px;
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
         }
         
         .btn {
             display: inline-block;
-            padding: 15px 30px;
-            border-radius: 50px;
+            background-color: var(--gold);
+            color: var(--black);
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
             font-weight: 600;
             transition: all 0.3s;
-            margin: 10px;
         }
         
-        .btn-gold {
-            background: var(--gold);
-            color: var(--black);
-            border: 2px solid var(--gold);
-        }
-        
-        .btn-gold:hover {
-            background: transparent;
-            color: var(--gold);
+        .btn:hover {
+            background-color: var(--white);
             transform: translateY(-3px);
         }
         
-        .btn-outline {
-            background: transparent;
-            color: var(--gold);
-            border: 2px solid var(--gold);
-        }
-        
-        .btn-outline:hover {
-            background: var(--gold);
-            color: var(--black);
-            transform: translateY(-3px);
-        }
-        
-        /* About Section */
-        .about {
-            padding: 100px 0;
-            background: var(--white);
-            position: relative;
-        }
-        
-        .about::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 40%;
-            height: 100%;
-            background: url('https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3') center/cover no-repeat;
-            opacity: 0.1;
-            z-index: 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .section-title h2 {
-            font-size: 48px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title h2:after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 3px;
-            background: var(--gold);
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .about-content {
+        .btn-instagram {
+            background-color: #E1306C;
+            color: white;
             display: flex;
             align-items: center;
-            gap: 50px;
-            position: relative;
-            z-index: 1;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .clients {
+            padding: 4rem 0;
+            background-color: var(--light-beige);
+            text-align: center;
+        }
+        
+        .client-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 3rem;
+            margin-top: 2rem;
+            align-items: center;
+        }
+        
+        .client-logos img {
+            height: 40px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+            filter: grayscale(100%);
+        }
+        
+        .client-logos img:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+        
+        .about {
+            padding: 5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 4rem;
         }
         
         .about-img {
             flex: 1;
-            border-radius: 10px;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
         .about-img img {
             width: 100%;
             height: auto;
             display: block;
-            transition: transform 0.5s;
         }
         
-        .about-img:hover img {
-            transform: scale(1.05);
-        }
-        
-        .about-text {
+        .about-content {
             flex: 1;
         }
         
-        .about-text h3 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: var(--gold);
-        }
-        
-        .about-text p {
-            margin-bottom: 20px;
-        }
-        
-        .signature {
-            font-family: 'Dancing Script', cursive;
-            font-size: 36px;
-            color: var(--gold);
-            margin-top: 30px;
-        }
-        
-        /* Services Section */
-        .services {
-            padding: 100px 0;
-            background: url('https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3') center/cover fixed;
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--black);
             position: relative;
-            color: var(--white);
         }
         
-        .services::before {
+        .section-title:after {
             content: '';
             position: absolute;
-            top: 0;
+            bottom: -10px;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            width: 60px;
+            height: 3px;
+            background-color: var(--gold);
         }
         
-        .services .container {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .services .section-title h2,
-        .services .section-title p {
-            color: var(--white);
+        .services {
+            padding: 5rem 0;
+            background-color: var(--light-beige);
         }
         
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 2rem;
+            margin-top: 3rem;
         }
         
         .service-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 10px;
+            background-color: var(--white);
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
         }
         
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
         
         .service-img {
@@ -326,47 +228,35 @@
         }
         
         .service-content {
-            padding: 30px;
+            padding: 1.5rem;
         }
         
-        .service-content h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: var(--gold);
-        }
-        
-        /* Portfolio Section */
         .portfolio {
-            padding: 100px 0;
-            background: var(--white);
+            padding: 5rem 0;
         }
         
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
         }
         
         .portfolio-item {
             position: relative;
             overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .portfolio-img {
+            border-radius: 8px;
             height: 300px;
-            overflow: hidden;
         }
         
-        .portfolio-img img {
+        .portfolio-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s;
         }
         
-        .portfolio-item:hover .portfolio-img img {
+        .portfolio-item:hover img {
             transform: scale(1.1);
         }
         
@@ -375,9 +265,9 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
             color: var(--white);
-            padding: 20px;
+            padding: 2rem 1rem 1rem;
             transform: translateY(100%);
             transition: transform 0.3s;
         }
@@ -386,548 +276,304 @@
             transform: translateY(0);
         }
         
-        /* Clients Section */
-        .clients {
-            padding: 80px 0;
-            background: var(--cream);
-        }
-        
-        .clients-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-        }
-        
-        .client-logo {
-            max-width: 150px;
-            filter: grayscale(100%);
-            opacity: 0.7;
-            transition: all 0.3s;
-        }
-        
-        .client-logo:hover {
-            filter: grayscale(0%);
-            opacity: 1;
-        }
-        
-        /* Instagram Section */
-        .instagram {
-            padding: 100px 0;
-            background: var(--white);
-        }
-        
-        .instagram-feed {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
-        
-        .instagram-post {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-        
-        .instagram-post img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .instagram-post:hover img {
-            transform: scale(1.1);
-        }
-        
-        .instagram-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        
-        .instagram-post:hover .instagram-overlay {
-            opacity: 1;
-        }
-        
-        .instagram-overlay i {
-            color: var(--white);
-            font-size: 30px;
-        }
-        
-        /* Contact Section */
         .contact {
-            padding: 100px 0;
-            background: var(--cream);
-            background-image: url('https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            position: relative;
-        }
-        
-        .contact::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(245, 245, 240, 0.9);
-        }
-        
-        .contact .container {
-            position: relative;
-            z-index: 1;
+            padding: 5rem 0;
+            background-color: var(--light-beige);
         }
         
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 50px;
+            gap: 3rem;
         }
         
-        .contact-info h3 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: var(--gold);
-        }
-        
-        .contact-details {
-            margin-bottom: 30px;
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
         }
         
         .contact-item {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 20px;
+            gap: 1rem;
         }
         
         .contact-icon {
-            font-size: 20px;
+            font-size: 1.5rem;
             color: var(--gold);
-            margin-right: 15px;
-            margin-top: 5px;
         }
         
-        .contact-text h4 {
-            font-size: 18px;
-            margin-bottom: 5px;
+        footer {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
         }
         
         .social-links {
             display: flex;
-            gap: 15px;
-        }
-        
-        .social-link {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--black);
-            color: var(--white);
-            display: flex;
-            align-items: center;
             justify-content: center;
-            transition: all 0.3s;
+            gap: 1.5rem;
+            margin: 1rem 0;
         }
         
-        .social-link:hover {
-            background: var(--gold);
-            color: var(--black);
-            transform: translateY(-5px);
-        }
-        
-        .contact-form .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        .contact-form textarea {
-            height: 150px;
-            resize: vertical;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--black);
+        .social-links a {
             color: var(--white);
-            padding: 50px 0 20px;
-            text-align: center;
-            position: relative;
-        }
-        
-        footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--gold), var(--dark-gold));
-        }
-        
-        .footer-logo {
-            font-family: 'Dancing Script', cursive;
-            font-size: 36px;
-            color: var(--gold);
-            margin-bottom: 20px;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-        
-        .footer-links li {
-            margin: 0 15px;
-        }
-        
-        .footer-links a {
+            font-size: 1.5rem;
             transition: color 0.3s;
         }
         
-        .footer-links a:hover {
+        .social-links a:hover {
             color: var(--gold);
         }
         
-        .copyright {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        /* Responsive */
-        @media (max-width: 992px) {
-            .hero-content h1 {
-                font-size: 56px;
-            }
-            
-            .about-content {
-                flex-direction: column;
-            }
-            
-            .about-img {
-                margin-bottom: 30px;
-            }
-            
-            .about::before {
-                width: 100%;
-                height: 40%;
-                top: auto;
-                bottom: 0;
-            }
+        .instagram-handle {
+            display: inline-block;
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 600;
         }
         
         @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 42px;
-            }
-            
-            .hero-content p {
-                font-size: 18px;
-            }
-            
             .nav-links {
                 display: none;
             }
             
-            .section-title h2 {
-                font-size: 36px;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .hero-content h1 {
-                font-size: 32px;
+            .hero h1 {
+                font-size: 2rem;
             }
             
-            .btn {
-                display: block;
-                width: 80%;
-                margin: 10px auto;
+            .about {
+                flex-direction: column;
             }
             
-            .footer-links li {
-                margin: 5px 10px;
+            .client-logos img {
+                height: 30px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">Hiba<span>Khudsia</span></a>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+            <nav>
+                <div class="logo">Shades of Me</div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Luxury Arabic Calligraphy & Engraving</h1>
-                <p>Elevating brands with exquisite handwritten artistry and precision engraving services across Saudi Arabia</p>
-                <div>
-                    <a href="#contact" class="btn btn-gold">Book a Consultation</a>
-                    <a href="#portfolio" class="btn btn-outline">View My Work</a>
-                </div>
+        <div class="hero-content">
+            <h1>Elevate Your Brand with Artistic Calligraphy & Engraving</h1>
+            <p>Professional services for PR events, brand activations & corporate gatherings across Saudi Arabia</p>
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <a href="#contact" class="btn">Book Your Service</a>
+                <a href="https://instagram.com/shades.of.me93" target="_blank" class="btn btn-instagram">
+                    <span>Follow on Instagram</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <section class="clients">
+        <div class="container">
+            <h2 class="section-title">Trusted By Premium Brands</h2>
+            <div class="client-logos">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Montblanc_logo.svg/2560px-Montblanc_logo.svg.png" alt="Montblanc">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Sephora_logo.svg/2560px-Sephora_logo.svg.png" alt="Sephora">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/L%27Occitane_logo.svg/2560px-L%27Occitane_logo.svg.png" alt="L'Occitane">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/BYREDO-Logo-Black.png/1200px-BYREDO-Logo-Black.png" alt="Byredo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Bath_%26_Body_Works_logo.svg/2560px-Bath_%26_Body_Works_logo.svg.png" alt="Bath & Body Works">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Lenskart_logo.png/1200px-Lenskart_logo.png" alt="Lenskart">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/American_Eagle_Outfitters_logo.svg/2560px-American_Eagle_Outfitters_logo.svg.png" alt="American Eagle">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Home_Centre_logo.png/1200px-Home_Centre_logo.png" alt="Homecentre">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Nesma_logo.png/1200px-Nesma_logo.png" alt="Nesma & Partners">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/SAB_logo.png/1200px-SAB_logo.png" alt="Sab Al Awwal">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/White_Cafe_logo.png/1200px-White_Cafe_logo.png" alt="White Cafe">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Match_logo.png/1200px-Match_logo.png" alt="Match">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Jhah_logo.png/1200px-Jhah_logo.png" alt="Jhah">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Laure_Beauty_logo.png/1200px-Laure_Beauty_logo.png" alt="Laure Beauty">
+            </div>
+        </div>
+    </section>
+
     <section class="about" id="about">
         <div class="container">
-            <div class="section-title">
-                <h2>About Me</h2>
+            <div class="about-img">
+                <img src="https://scontent.cdninstagram.com/v/t39.30808-6/432691718_1222155762132336_7270219826714534270_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=101&_nc_ohc=3Q8WzQz3xGcAX8QzJj1&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzI1ODk0ODQ0MDY1MTQxODQ5MA%3D%3D.2-ccb7-5&oh=00_AfDpW1Y9Q5F8Jpz8X3L3v5K5v5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q&oe=660B9B9F&_nc_sid=10d13b" alt="Khudsia Siddiqua - Professional Calligrapher">
             </div>
             <div class="about-content">
-                <div class="about-img">
-                    <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Hiba Khudsia Siddiqua">
-                </div>
-                <div class="about-text">
-                    <h3>Hiba Khudsia Siddiqua</h3>
-                    <p>With over a decade of experience in luxury Arabic calligraphy and engraving, I specialize in creating bespoke handwritten pieces and precision engravings for elite brands and discerning clients across Saudi Arabia.</p>
-                    <p>My work has graced products and events for Montblanc, Swarovski, Rituals, Sephora, Bath & Body Works, and other prestigious brands, bringing an unparalleled level of artistry and craftsmanship to every project.</p>
-                    <p>Based in Khobar but serving clients throughout the Eastern Province and across KSA, I combine traditional Islamic calligraphy techniques with contemporary aesthetics to create timeless pieces that elevate any brand experience.</p>
-                    <div class="signature">Hiba Khudsia</div>
-                </div>
+                <h2 class="section-title">About Me</h2>
+                <p>Khudsia Siddiqua is a professional calligrapher and engraver specializing in luxury brand experiences across Saudi Arabia.</p>
+                <p>With refined expertise in both traditional and contemporary techniques, I create bespoke calligraphy and precision engraving for premium products, corporate gifts, and special events.</p>
+                <p>My work focuses on transforming ordinary items into personalized treasures through meticulous craftsmanship and artistic vision.</p>
+                <p>See more of my work on Instagram: <a href="https://instagram.com/shades.of.me93" target="_blank" class="instagram-handle">@shades.of.me93</a></p>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
-            <div class="section-title">
-                <h2>My Services</h2>
-                <p>Custom solutions for luxury brands and special events</p>
-            </div>
+            <h2 class="section-title">My Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Luxury Brand Calligraphy">
+                        <img src="https://scontent.cdninstagram.com/v/t39.30808-6/432691718_1222155762132336_7270219826714534270_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=101&_nc_ohc=3Q8WzQz3xGcAX8QzJj1&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzI1ODk0ODQ0MDY1MTQxODQ5MA%3D%3D.2-ccb7-5&oh=00_AfDpW1Y9Q5F8Jpz8X3L3v5K5v5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q&oe=660B9B9F&_nc_sid=10d13b" alt="Calligraphy Services">
                     </div>
                     <div class="service-content">
-                        <h3>Luxury Brand Calligraphy</h3>
-                        <p>Bespoke Arabic calligraphy for product packaging, store signage, and marketing materials that elevate your brand's aesthetic.</p>
+                        <h3>Calligraphy Services</h3>
+                        <ul>
+                            <li>Live event calligraphy</li>
+                            <li>Custom place cards</li>
+                            <li>Branded signage</li>
+                            <li>Luxury packaging</li>
+                            <li>Wedding calligraphy</li>
+                        </ul>
                     </div>
                 </div>
+                
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Product Engraving">
+                        <img src="https://scontent.cdninstagram.com/v/t39.30808-6/432691718_1222155762132336_7270219826714534270_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=101&_nc_ohc=3Q8WzQz3xGcAX8QzJj1&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzI1ODk0ODQ0MDY1MTQxODQ5MA%3D%3D.2-ccb7-5&oh=00_AfDpW1Y9Q5F8Jpz8X3L3v5K5v5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q&oe=660B9B9F&_nc_sid=10d13b" alt="Engraving Services">
                     </div>
                     <div class="service-content">
-                        <h3>Premium Product Engraving</h3>
-                        <p>Precision Arabic engraving on leather, glass, metal, and wood for luxury goods, corporate gifts, and special editions.</p>
+                        <h3>Engraving Services</h3>
+                        <ul>
+                            <li>Product personalization</li>
+                            <li>Corporate awards</li>
+                            <li>Executive gifts</li>
+                            <li>Jewelry engraving</li>
+                            <li>Leather goods</li>
+                        </ul>
                     </div>
                 </div>
+                
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Event Calligraphy">
+                        <img src="https://scontent.cdninstagram.com/v/t39.30808-6/432691718_1222155762132336_7270219826714534270_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=101&_nc_ohc=3Q8WzQz3xGcAX8QzJj1&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzI1ODk0ODQ0MDY1MTQxODQ5MA%3D%3D.2-ccb7-5&oh=00_AfDpW1Y9Q5F8Jpz8X3L3v5K5v5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q&oe=660B9B9F&_nc_sid=10d13b" alt="Brand Experiences">
                     </div>
                     <div class="service-content">
-                        <h3>Exclusive Event Calligraphy</h3>
-                        <p>Live Arabic calligraphy demonstrations and personalized place cards, invitations, and signage for high-profile events.</p>
+                        <h3>Brand Experiences</h3>
+                        <ul>
+                            <li>Pop-up calligraphy stations</li>
+                            <li>Product launch activations</li>
+                            <li>VIP customer events</li>
+                            <li>Team-building workshops</li>
+                            <li>Retail personalization</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
     <section class="portfolio" id="portfolio">
         <div class="container">
-            <div class="section-title">
-                <h2>Portfolio</h2>
-                <p>A selection of my recent work for luxury brands and private clients</p>
-            </div>
+            <h2 class="section-title">My Work</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">View more on <a href="https://instagram.com/shades.of.me93" target="_blank" class="instagram-handle">Instagram @shades.of.me93</a></p>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <div class="portfolio-img">
-                        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Montblanc Collection">
-                    </div>
+                    <img src="https://scontent.cdninstagram.com/v/t39.30808-6/432691718_1222155762132336_7270219826714534270_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=101&_nc_ohc=3Q8WzQz3xGcAX8QzJj1&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzI1ODk0ODQ0MDY1MTQxODQ5MA%3D%3D.2-ccb7-5&oh=00_AfDpW1Y9Q5F8Jpz8X3L3v5K5v5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q&oe=660B9B9F&_nc_sid=10d13b" alt="Arabic Calligraphy">
                     <div class="portfolio-overlay">
-                        <h3>Montblanc Leather Collection</h3>
+                        <h3>Arabic Calligraphy</h3>
+                        <p>Traditional ink on premium paper</p>
                     </div>
                 </div>
+                
                 <div class="portfolio-item">
-                    <div class="portfolio-img">
-                        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Swarovski Engraving">
-                    </div>
+                    <img src="https://scontent.cdninstagram.com/v/t39.30808-6/432691718_1222155762132336_7270219826714534270_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=101&_nc_ohc=3Q8WzQz3xGcAX8QzJj1&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzI1ODk0ODQ0MDY1MTQxODQ5MA%3D%3D.2-ccb7-5&oh=00_AfDpW1Y9Q5F8Jpz8X3L3v5K5v5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q&oe=660B9B9F&_nc_sid=10d13b" alt="Leather Engraving">
                     <div class="portfolio-overlay">
-                        <h3>Swarovski Crystal Engraving</h3>
+                        <h3>Leather Engraving</h3>
+                        <p>Personalized luxury journal</p>
                     </div>
                 </div>
+                
                 <div class="portfolio-item">
-                    <div class="portfolio-img">
-                        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="VIP Event">
-                    </div>
+                    <img src="https://scontent.cdninstagram.com/v/t39.30808-6/432691718_1222155762132336_7270219826714534270_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=101&_nc_ohc=3Q8WzQz3xGcAX8QzJj1&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzI1ODk0ODQ0MDY1MTQxODQ5MA%3D%3D.2-ccb7-5&oh=00_AfDpW1Y9Q5F8Jpz8X3L3v5K5v5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q&oe=660B9B9F&_nc_sid=10d13b" alt="Glass Engraving">
                     <div class="portfolio-overlay">
-                        <h3>VIP Event Calligraphy</h3>
+                        <h3>Glass Engraving</h3>
+                        <p>Custom perfume bottle</p>
                     </div>
                 </div>
+                
                 <div class="portfolio-item">
-                    <div class="portfolio-img">
-                        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Brand Packaging">
-                    </div>
+                    <img src="https://scontent.cdninstagram.com/v/t39.30808-6/432691718_1222155762132336_7270219826714534270_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=101&_nc_ohc=3Q8WzQz3xGcAX8QzJj1&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzI1ODk0ODQ0MDY1MTQxODQ5MA%3D%3D.2-ccb7-5&oh=00_AfDpW1Y9Q5F8Jpz8X3L3v5K5v5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q&oe=660B9B9F&_nc_sid=10d13b" alt="Metal Engraving">
                     <div class="portfolio-overlay">
-                        <h3>Luxury Brand Packaging</h3>
+                        <h3>Metal Engraving</h3>
+                        <p>Executive pen personalization</p>
                     </div>
                 </div>
+                
                 <div class="portfolio-item">
-                    <div class="portfolio-img">
-                        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Corporate Gifts">
-                    </div>
+                    <img src="https://scontent.cdninstagram.com/v/t39.30808-6/432691718_1222155762132336_7270219826714534270_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=101&_nc_ohc=3Q8WzQz3xGcAX8QzJj1&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzI1ODk0ODQ0MDY1MTQxODQ5MA%3D%3D.2-ccb7-5&oh=00_AfDpW1Y9Q5F8Jpz8X3L3v5K5v5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q&oe=660B9B9F&_nc_sid=10d13b" alt="Event Calligraphy">
                     <div class="portfolio-overlay">
-                        <h3>Personalized Corporate Gifts</h3>
+                        <h3>Event Calligraphy</h3>
+                        <p>Live guest name writing</p>
                     </div>
                 </div>
+                
                 <div class="portfolio-item">
-                    <div class="portfolio-img">
-                        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Wedding Calligraphy">
-                    </div>
+                    <img src="https://scontent.cdninstagram.com/v/t39.30808-6/432691718_1222155762132336_7270219826714534270_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=scontent.cdninstagram.com&_nc_cat=101&_nc_ohc=3Q8WzQz3xGcAX8QzJj1&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzI1ODk0ODQ0MDY1MTQxODQ5MA%3D%3D.2-ccb7-5&oh=00_AfDpW1Y9Q5F8Jpz8X3L3v5K5v5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q5Q&oe=660B9B9F&_nc_sid=10d13b" alt="Packaging Design">
                     <div class="portfolio-overlay">
-                        <h3>Luxury Wedding Calligraphy</h3>
+                        <h3>Packaging Design</h3>
+                        <p>Luxury gift box calligraphy</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Clients Section -->
-    <section class="clients">
-        <div class="container">
-            <div class="section-title">
-                <h2>Brands I've Worked With</h2>
-            </div>
-            <div class="clients-grid">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Montblanc_Logo.svg/1200px-Montblanc_Logo.svg.png" alt="Montblanc" class="client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Swarovski_logo.svg/1200px-Swarovski_logo.svg.png" alt="Swarovski" class="client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Rituals_logo.svg/1200px-Rituals_logo.svg.png" alt="Rituals" class="client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Sephora_logo.svg/1200px-Sephora_logo.svg.png" alt="Sephora" class="client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bath_%26_Body_Works_logo.svg/1200px-Bath_%26_Body_Works_logo.svg.png" alt="Bath & Body Works" class="client-logo">
-            </div>
-        </div>
-    </section>
-
-    <!-- Instagram Section -->
-    <section class="instagram">
-        <div class="container">
-            <div class="section-title">
-                <h2>Recent Work</h2>
-                <p>Follow my creative process on Instagram <a href="https://www.instagram.com/shades.of.me93/" target="_blank" style="color: var(--gold);">@shades.of.me93</a></p>
-            </div>
-            <div class="instagram-feed">
-                <!-- Instagram posts would be loaded here via API -->
-                <div class="instagram-post">
-                    <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Calligraphy Work">
-                    <div class="instagram-overlay">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                </div>
-                <div class="instagram-post">
-                    <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Engraving Work">
-                    <div class="instagram-overlay">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                </div>
-                <div class="instagram-post">
-                    <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Brand Work">
-                    <div class="instagram-overlay">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                </div>
-                <div class="instagram-post">
-                    <img src="https://scontent.cdninstagram.com/v/t51.29350-15/340840140_756055699335300_4904674302706323136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=abc123xyz&_nc_ht=scontent.cdninstagram.com&oh=00_AfD-abc123xyz&oe=64A1B2C3" alt="Event Work">
-                    <div class="instagram-overlay">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <div class="section-title">
-                <h2>Get In Touch</h2>
-                <p>Available for commissions across Saudi Arabia</p>
-            </div>
+            <h2 class="section-title">Get In Touch</h2>
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>Contact Details</h3>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Location</h4>
-                                <p>Khobar, Eastern Province, Saudi Arabia</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Phone</h4>
-                                <p><a href="tel:+966560405291">+966 56 040 5291</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Email</h4>
-                                <p><a href="mailto:khudsiasiddiqui@gmail.com">khudsiasiddiqui@gmail.com</a></p>
-                            </div>
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>khudsiasiddiqua@gmail.com</p>
                         </div>
                     </div>
-                    <h3>Follow Me</h3>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/shades.of.me93/" class="social-link" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <div>
+                            <h4>Mobile</h4>
+                            <p>0560405291</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <h4>Service Areas</h4>
+                            <p>Available throughout Saudi Arabia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">📷</span>
+                        <div>
+                            <h4>Instagram</h4>
+                            <p><a href="https://instagram.com/shades.of.me93" target="_blank" class="instagram-handle">@shades.of.me93</a></p>
+                        </div>
                     </div>
                 </div>
+                
                 <div class="contact-form">
+                    <h3>Send a Message</h3>
                     <form>
                         <div class="form-group">
                             <input type="text" placeholder="Your Name" required>
@@ -939,46 +585,24 @@
                             <input type="text" placeholder="Subject">
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Your Message" required></textarea>
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-gold">Send Message</button>
+                        <button type="submit" class="btn">Send Message</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-logo">Hiba Khudsia</div>
-            <ul class="footer-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="copyright">
-                <p>&copy; 2023 Hiba Khudsia Siddiqua. All Rights Reserved.</p>
+            <div class="logo">Shades of Me</div>
+            <p>Professional Calligraphy & Engraving Services</p>
+            <div class="social-links">
+                <a href="https://instagram.com/shades.of.me93" target="_blank" title="Instagram">📷</a>
             </div>
+            <p>&copy; 2023 Shades of Me. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Lightbox Script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-    <script>
-        // Simple smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-        
-        // Instagram feed would be loaded here via API in a real implementation
-    </script>
 </body>
 </html>
